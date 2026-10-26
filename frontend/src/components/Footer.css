@@ -1,0 +1,158 @@
+/* ====================================================
+   3. FOOTER (Professional E-commerce Design)
+   ==================================================== */
+.site-footer {
+  background: var(--ink, #24281a);
+  color: #e8e9e1;
+  padding-top: 80px;
+  border-top: 1px solid #333;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.footer-brand {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.footer-brand .brand-mark {
+  margin-right: 5px;
+}
+
+.footer-brand-col p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #a5a99d;
+  margin: 0 0 25px 0;
+  max-width: 300px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e8e9e1;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--lime, #d4f34a);
+  color: var(--ink, #24281a);
+  transform: translateY(-3px);
+}
+
+/* Footer Links Columns */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer-links b {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #a5a99d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--lime, #d4f34a);
+}
+
+/* Footer Bottom (Copyright & Payments) */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #92978c;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px; /* Logos ke beech ka gap */
+  align-items: center;
+}
+
+/* Payment Images ke liye White Box Design */
+.pay-badge {
+  background: #ffffff; /* Dark footer par logos dikhane ke liye white background */
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  min-width: 45px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pay-badge img {
+  height: 14px; /* Logos ki fix height taaki sab ek size ke lagein */
+  width: auto;
+  object-fit: contain;
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ==================================================== */
+@media screen and (max-width: 991px) {
+  .footer-main {
+     grid-template-columns: 1fr 1fr;
+     gap: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-footer {
+     padding-top: 60px;
+  }
+
+  .footer-main {
+     grid-template-columns: 1fr;
+     gap: 40px;
+  }
+  
+  .footer-brand-col p {
+     max-width: 100%;
+  }
+
+  .footer-bottom {
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+  }
+}

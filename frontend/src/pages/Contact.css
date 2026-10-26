@@ -1,0 +1,387 @@
+/* ====================================================
+   9. CONTENT / CATEGORY / ARTICLE PAGE
+   ==================================================== */
+.content-page {
+   padding-top: 90px;
+   padding-bottom: 110px;
+}
+
+.content-hero {
+   padding: 20px 0 60px;
+   max-width: 760px;
+}
+
+.content-hero.compact {
+   padding-bottom: 45px;
+}
+
+.content-hero h1 {
+   font-family: Manrope, sans-serif; 
+   font-size: clamp(44px, 7vw, 82px);
+   letter-spacing: -0.07em;
+   line-height: 1.02;
+   margin: 18px 0;
+}
+
+.content-hero h1 span {
+   color: #848f67;
+}
+
+.content-hero>p {
+   max-width: 600px;
+   color: var(--muted);
+   font-size: 17px;
+   line-height: 1.8;
+}
+
+.content-grid,
+.contact-layout {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 55px;
+   margin: 20px 0 50px;
+}
+
+.content-grid section {
+   border-top: 1px solid var(--line);
+   padding-top: 25px;
+}
+
+.content-grid h2,
+.contact-layout h2 {
+   font-family: Manrope, sans-serif;
+   letter-spacing: -0.04em;
+}
+
+.content-grid p,
+.contact-layout p {
+   font-size: 17px;
+   color: #454c44;
+   line-height: 1.8;
+}
+
+.category-page h1 {
+   font-family: Manrope, sans-serif;
+   font-size: clamp(40px, 5vw, 65px);
+   letter-spacing: -0.06em;
+   margin: 12px 0 0;
+}
+
+.category-heading {
+   align-items: flex-end;
+}
+
+.category-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 16px;
+}
+
+.category-tile {
+   height: 300px;
+   border: 0;
+   padding: 0;
+   position: relative;
+   overflow: hidden;
+   text-align: left;
+   border-radius: 8px;
+   color: white;
+   background: #777;
+}
+
+.category-tile img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.6s;
+}
+
+.category-tile:hover img {
+   transform: scale(1.07);
+}
+
+.category-overlay {
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(0deg, #151b15c9 0%, #1114 40%, transparent 78%);
+}
+
+.category-label {
+   position: absolute;
+   left: 21px;
+   bottom: 22px;
+}
+
+.category-label small {
+   font-size: 12px;
+   opacity: 0.82;
+}
+
+.category-label h3 {
+   font-family: Manrope, sans-serif;
+   font-size: 24px;
+   letter-spacing: -0.04em;
+   margin: 7px 0 0;
+}
+
+.category-arrow {
+   position: absolute;
+   right: 17px;
+   bottom: 20px;
+   width: 35px;
+   height: 35px;
+   display: grid;
+   place-items: center;
+   border: 1px solid #ffffff80;
+   border-radius: 50%;
+   transition: background 0.2s, color 0.2s;
+}
+
+.category-tile:hover .category-arrow {
+   background: var(--lime);
+   color: var(--ink);
+   border-color: var(--lime);
+}
+
+.article-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+}
+
+.article-card {
+   background: #f7f6f0;
+   border-radius: 8px;
+   overflow: hidden;
+}
+
+.article-card>img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+}
+
+.article-copy {
+   padding: 25px;
+}
+
+.article-copy small {
+   color: #858b78;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+}
+
+.article-copy h2 {
+   font-family: Manrope, sans-serif;
+   font-size: 21px;
+   letter-spacing: -0.04em;
+   line-height: 1.15;
+   margin: 13px 0;
+}
+
+.article-copy p {
+   color: var(--muted);
+   font-size: 14px;
+   line-height: 1.7;
+}
+
+.article-copy button {
+   border: 0;
+   background: none;
+   padding: 0;
+   margin-top: 8px;
+}
+
+.article-detail {
+   max-width: 900px;
+   margin: 35px auto;
+}
+
+.article-detail>img {
+   width: 100%;
+   height: 430px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+.article-detail-copy {
+   max-width: 720px;
+   margin: 35px auto;
+}
+
+.article-detail-copy h1 {
+   font-family: Manrope, sans-serif;
+   font-size: clamp(38px, 6vw, 65px);
+   line-height: 1.05;
+   letter-spacing: -0.06em;
+   margin: 15px 0 25px;
+}
+
+.article-detail-copy h2 {
+   font-family: Manrope, sans-serif;
+   margin-top: 35px;
+}
+
+.article-detail-copy p {
+   font-size: 17px;
+   line-height: 1.85;
+   color: #454c44;
+}
+
+.contact-layout {
+   align-items: start;
+}
+
+.page-empty {
+   min-height: 60vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.loading-page {
+   padding: 100px 20px;
+   text-align: center;
+   color: #7a7f72;
+   font-size: 13px;
+}
+
+
+/* ====================================================
+   UNIQUE CONTACT FORM CSS (No Conflicts)
+   ==================================================== */
+.shopnova-contact-wrapper {
+   width: 100%;
+   max-width: 560px;
+   background: #fff;
+   padding: 35px;
+   border-radius: 10px;
+   border: 1px solid var(--line, #e9e8e1);
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.shopnova-contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: 22px;
+}
+
+.shopnova-form-group {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.shopnova-form-group label {
+   font-size: 14px;
+   font-weight: 700;
+   color: var(--ink, #20241f);
+   font-family: "DM Sans", sans-serif;
+}
+
+.shopnova-form-input {
+   width: 100%;
+   padding: 14px 16px;
+   border: 1px solid var(--line, #e9e8e1);
+   border-radius: 7px;
+   background: #fffdf9;
+   font-size: 15px;
+   color: #000;
+   outline: none;
+   font-family: inherit;
+   transition: all 0.2s ease;
+}
+
+.shopnova-textarea {
+   resize: vertical;
+   min-height: 120px;
+}
+
+.shopnova-form-input:focus {
+   border-color: #848f67;
+   box-shadow: 0 0 0 3px rgba(132, 143, 103, 0.15);
+   background: #fff;
+}
+
+.shopnova-submit-btn {
+   background: var(--ink, #20241f);
+   color: #fff;
+   border: none;
+   padding: 15px 28px;
+   border-radius: 7px;
+   font-size: 15px;
+   font-weight: 700;
+   cursor: pointer;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 10px;
+   width: max-content;
+   transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.shopnova-submit-btn:hover {
+   background: #3b4235;
+   transform: translateY(-2px);
+}
+
+
+/* ====================================================
+   RESPONSIVE DESIGN (Content / Category / Article)
+   ==================================================== */
+@media screen and (max-width: 991px) {
+   .category-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   
+   .article-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   
+   .content-grid,
+   .contact-layout {
+      gap: 30px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .content-page {
+      padding-top: 50px;
+      padding-bottom: 60px;
+   }
+
+   /* 2-column ko 1-column me badalna */
+   .content-grid,
+   .contact-layout {
+      grid-template-columns: 1fr;
+   }
+
+   .category-grid,
+   .article-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .category-tile {
+      height: 250px;
+   }
+
+   .article-detail>img {
+      height: 280px; /* Mobile par image ki height adjust karna */
+   }
+
+   .content-hero {
+      padding: 10px 0 30px;
+   }
+
+   /* Contact Form Mobile adjustments */
+   .shopnova-contact-wrapper {
+      padding: 24px;
+   }
+   
+   .shopnova-submit-btn {
+      width: 100%;
+   }
+}

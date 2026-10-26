@@ -1,0 +1,41 @@
+import mongoose from 'mongoose';
+const productSchema = new mongoose.Schema({
+  sku: { type: String, unique: true, sparse: true, trim: true, index: true },
+  name: { type: String, required: true, trim: true },
+  slug: { type: String, unique: true, sparse: true, index: true },
+  brand: { type: String, default: 'ShopNova' },
+  description: { type: String, default: '' },
+  category: { type: String, required: true, index: true },
+  subcategory: { type: String, default: '', index: true },
+  tags: [{ type: String, lowercase: true, trim: true }],
+  price: { type: Number, required: true, min: 0 },
+  originalPrice: { type: Number, min: 0 },
+  image: { type: String, required: true },
+  images: [{ type: String }],
+  imageAssets: [{
+    url: { type: String, trim: true },
+    publicId: { type: String, trim: true },
+  }],
+  sizes: [{ type: String }],
+  colors: [{ type: String }],
+  enableSizes: { type: Boolean, default: true },
+  enableColors: { type: Boolean, default: true },
+  variants: [{
+    sku: { type: String, trim: true },
+    size: { type: String, trim: true },
+    color: { type: String, trim: true },
+    price: { type: Number, min: 0 },
+    stock: { type: Number, min: 0, default: 0 },
+    isActive: { type: Boolean, default: true },
+  }],
+  material: { type: String, default: '' },
+  care: { type: String, default: '' },
+  stock: { type: Number, default: 0, min: 0 },
+  isActive: { type: Boolean, default: true, index: true },
+  featured: { type: Boolean, default: false },
+  bestseller: { type: Boolean, default: false },
+  newArrival: { type: Boolean, default: false },
+  rating: { type: Number, default: 4.5, min: 0, max: 5 },
+  reviewCount: { type: Number, default: 0, min: 0 }
+}, { timestamps: true });
+export default mongoose.model('Product', productSchema);

@@ -1,0 +1,40 @@
+/* --- GOL (CIRCULAR) LOADER CSS --- */
+.circular-loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* Screen ke center mein rakhne ke liye */
+  width: 100%;
+  gap: 16px;
+}
+
+.gole-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f4f6; /* Halka grey background */
+  border-top: 5px solid #d7f36a; /* Indigo brand color */
+  border-radius: 50%; /* Isse loader gol banta hai */
+  animation: spin 1s linear infinite; /* Gol ghumane ki animation */
+}
+
+.loader-text {
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+  animation: pulse-text 1.5s ease-in-out infinite;
+}
+
+/* Spinner ko ghumane ka keyframe */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Text ko thoda fade in-out karne ka effect */
+@keyframes pulse-text {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

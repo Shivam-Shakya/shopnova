@@ -1,0 +1,314 @@
+/* ====================================================
+   FULL WIDTH CART UI (THEME SYNCED)
+   ==================================================== */
+.cart-fluid-container {
+  width: min(1400px, calc(100% - 48px));
+  margin: 40px auto 100px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.cart-header-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 30px;
+}
+.cart-header-fluid h2 { 
+  font-family: "Manrope", sans-serif; 
+  font-size: clamp(32px, 4vw, 46px); 
+  letter-spacing: -0.06em;
+  margin: 0; 
+  color: var(--ink); 
+}
+.cart-header-fluid h2 span { font-size: 18px; color: var(--muted); font-weight: 500; }
+.continue-shopping { 
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: 1px solid var(--muted);
+  padding-bottom: 4px;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+.continue-shopping:hover { gap: 12px; }
+
+.cart-grid-fluid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Table Style Cart Rows */
+.cart-items-column {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ecom-cart-header {
+  display: flex;
+  padding: 16px 24px;
+  background: #f9f8f2;
+  border-bottom: 1px solid var(--line);
+  font-weight: 700;
+  color: #50594b;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ecom-cart-row {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.ecom-cart-row:last-child { border-bottom: none; }
+
+.col-product { flex: 2; min-width: 250px; }
+.col-price { flex: 1; text-align: center; font-size: 16px; color: var(--ink); }
+.col-qty { flex: 1; display: flex; justify-content: center; }
+.col-total { flex: 1; text-align: right; font-size: 18px; font-weight: 700; color: var(--ink); }
+
+.item-info-flex {
+  display: flex;
+  gap: 20px;
+}
+.item-info-flex img {
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.item-title { 
+  font-size: 16px; 
+  font-weight: 600; 
+  color: var(--ink); 
+  text-decoration: none; 
+  display: block; 
+  margin-bottom: 5px; 
+}
+.item-title:hover { opacity: 0.7; }
+.item-variant { font-size: 13px; color: var(--muted); display: block; margin-bottom: 15px; }
+
+.remove-text-btn { 
+  background: transparent; 
+  border: none; 
+  font-weight: 700; 
+  font-size: 12px; 
+  color: var(--muted); 
+  cursor: pointer; 
+  padding: 0; 
+  letter-spacing: 0.05em;
+}
+.remove-text-btn:hover { color: var(--orange); }
+
+.stepper-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.stepper-input button { background: #fff; border: none; width: 34px; height: 34px; cursor: pointer; display: grid; place-items: center; color: var(--ink); }
+.stepper-input button:hover { background: #f9f8f2; }
+.stepper-input input { width: 40px; height: 34px; border: none; border-left: 1px solid var(--line); border-right: 1px solid var(--line); text-align: center; font-weight: 600; color: var(--ink); outline: none; }
+
+/* Checkout Sidebar Panel */
+.checkout-summary-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 30px;
+  position: sticky;
+  top: 100px; 
+}
+
+.checkout-summary-box h3 { 
+  font-family: "Manrope", sans-serif;
+  font-size: 20px; 
+  color: var(--ink); 
+  margin: 0 0 20px; 
+}
+.checkout-summary-box hr { border: none; border-top: 1px solid var(--line); margin: 18px 0; }
+
+.price-row { display: flex; justify-content: space-between; font-size: 15px; color: var(--muted); margin-bottom: 14px; }
+.price-row span:last-child { color: var(--ink); font-weight: 500; }
+.total-amount { font-size: 18px; font-weight: 700; margin: 20px 0; color: var(--ink); }
+.total-amount span:last-child { font-weight: 700; }
+
+.text-success { color: var(--ink) !important; font-weight: 700; }
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: var(--lime);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* ====================================================
+   100% ISOLATED CART FORM STYLES
+   ==================================================== */
+.shopnova-cart-form {
+  margin-top: 20px;
+  display: block;
+}
+
+.shopnova-cart-form h4 { 
+  font-family: "Manrope", sans-serif;
+  font-size: 16px; 
+  margin: 0 0 15px; 
+  color: var(--ink);
+}
+
+.shopnova-cart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.shopnova-cart-full { 
+  grid-column: 1 / -1; 
+}
+
+.shopnova-cart-input { 
+  width: 100%; 
+  box-sizing: border-box; /* This prevents overflow out of grid */
+  padding: 14px; 
+  border: 1px solid var(--line, #e9e8e1); 
+  border-radius: 6px; 
+  font-size: 14px; 
+  background: #fff; 
+  color: var(--ink, #20241f); 
+  outline: none; 
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.shopnova-cart-input:focus { 
+  border-color: #848f67; 
+  box-shadow: 0 0 0 3px rgba(132, 143, 103, 0.15);
+}
+
+.shopnova-cart-btn { 
+  background: var(--ink, #20241f); 
+  color: #fff;
+  font-size: 15px; 
+  padding: 18px; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+  border-radius: 7px;
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopnova-cart-btn:hover { 
+  background: #3b4235; 
+  transform: translateY(-2px); 
+}
+
+.empty-cart-fluid { text-align: center; padding: 100px 20px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.empty-cart-fluid h2 { font-family: "Manrope", sans-serif; margin: 24px 0 10px; font-size: 28px; color: var(--ink); }
+.empty-cart-fluid p { color: var(--muted); margin-bottom: 30px; }
+
+/* ====================================================
+   ORDER SUCCESS SCREEN STYLES
+   ==================================================== */
+.order-success-fluid {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: var(--cream, #fffdf9);
+  font-family: "DM Sans", sans-serif;
+}
+
+.success-banner {
+  background: #fff;
+  border: 1px solid var(--line, #e9e8e1);
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-success {
+  color: #388e3c; /* Solid green for success */
+  background: #f4fbf5;
+  border-radius: 50%;
+  padding: 12px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+}
+
+.success-banner h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  color: var(--ink, #20241f);
+  margin: 0 0 12px;
+  letter-spacing: -0.04em;
+}
+
+.success-banner p {
+  color: var(--muted, #777b73);
+  font-size: 16px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.success-banner p b {
+  color: var(--ink, #20241f);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .success-banner {
+    padding: 40px 20px;
+  }
+  
+  .success-banner h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cart-grid-fluid { grid-template-columns: 1fr; gap: 30px; }
+  .ecom-cart-header, .col-price, .col-total { display: none; } 
+  .ecom-cart-row { flex-direction: column; align-items: flex-start; gap: 15px; }
+  .col-qty { margin-left: 110px; }
+}
+
+@media (max-width: 768px) {
+  .cart-fluid-container { width: calc(100% - 30px); margin-top: 20px; }
+  .shopnova-cart-grid { grid-template-columns: 1fr; }
+}

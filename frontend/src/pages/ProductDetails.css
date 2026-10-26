@@ -1,0 +1,257 @@
+/* ====================================================
+   6. PRODUCT DETAIL PAGE
+   ==================================================== */
+.detail-page {
+   padding-top: 35px;
+   padding-bottom: 85px;
+}
+
+.back-link {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   font-size: 14px;
+   color: #6f7368;
+   margin-bottom: 30px;
+   padding: 10px 15px;
+   border: 1px solid var(--line);
+   border-radius: 10px;
+   background: #fff;
+}
+
+.back-link:hover {
+   color: var(--ink);
+}
+
+.detail-grid {
+   display: grid;
+   grid-template-columns: 1.05fr 0.95fr;
+   gap: 70px;
+}
+
+.detail-image {
+   height: 530px;
+   background: #f0eee7;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.detail-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.detail-thumbnails {
+   display: flex;
+   gap: 10px;
+   margin-top: 12px;
+}
+
+.detail-thumbnails button {
+   border: 1px solid var(--line);
+   background: #fff;
+   padding: 3px;
+   width: 64px;
+   height: 64px;
+}
+
+.detail-thumbnails button.selected {
+   border: 2px solid var(--ink);
+}
+
+.detail-thumbnails img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.detail-copy h1 {
+   font-family: Manrope, sans-serif;
+   font-size: clamp(34px, 4vw, 52px);
+   letter-spacing: -0.06em;
+   line-height: 1.08;
+   margin: 16px 0;
+}
+
+.detail-rating {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   color: #9b792c;
+   font-size: 11px;
+}
+
+.detail-rating span {
+   color: #aaa;
+}
+
+.detail-price {
+   font-size: 24px;
+   font-weight: 700;
+   margin: 25px 0;
+}
+
+.detail-price del {
+   font-size: 14px;
+   font-weight: 400;
+   color: #999;
+   margin-left: 9px;
+}
+
+.detail-price small {
+   font-size: 11px;
+   color: #748742;
+   font-weight: 700;
+}
+
+.detail-copy p {
+   font-size: 17px;
+   line-height: 1.9;
+   color: #454c44;
+}
+
+.stock-note {
+   font-size: 14px !important;
+   color: #7a865b !important;
+}
+
+.variant-group {
+   margin: 22px 0;
+}
+
+.variant-group>b {
+   display: block;
+   font-size: 12px;
+   margin-bottom: 9px;
+}
+
+.variant-options {
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+}
+
+.variant-options button {
+   background: #fff;
+   border: 1px solid #d8d9d0;
+   border-radius: 4px;
+   padding: 9px 15px;
+   font-size: 12px;
+}
+
+.variant-options button.selected {
+   border-color: var(--ink);
+   background: var(--ink);
+   color: #fff;
+}
+
+.detail-actions {
+   display: flex;
+   gap: 12px;
+   align-items: center;
+   margin-top: 25px;
+}
+
+.quantity-control {
+   height: 42px;
+   display: flex;
+   align-items: center;
+   border: 1px solid #dedfd6;
+   border-radius: 6px;
+   gap: 15px;
+   padding: 0 10px;
+}
+
+.quantity-control button {
+   border: 0;
+   background: transparent;
+   display: grid;
+   place-items: center;
+   padding: 4px;
+}
+
+.quantity-control span {
+   font-size: 12px;
+}
+
+.detail-actions .btn {
+   flex: 1;
+}
+
+.detail-wish.liked {
+   color: var(--orange);
+}
+
+.detail-perks {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   border-top: 1px solid var(--line);
+   padding-top: 18px;
+   margin-top: 25px;
+   font-size: 14px;
+   color: #777c70;
+}
+
+.product-specs p {
+   margin: 6px 0;
+   font-size: 15px;
+}
+
+.related-section {
+   padding: 70px 0;
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN (Product Detail Page)
+   ==================================================== */
+@media screen and (max-width: 991px) {
+   .detail-grid {
+      grid-template-columns: 1fr;
+      gap: 35px;
+   }
+
+   .detail-image {
+      height: auto;
+      aspect-ratio: 4/5; /* Aspect ratio maintain karega */
+   }
+   
+   .detail-thumbnails button {
+      width: 80px;
+      height: 80px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .detail-page {
+      padding-top: 15px;
+      padding-bottom: 50px;
+   }
+
+   .detail-copy h1 {
+      font-size: 28px;
+   }
+
+   .detail-price {
+      font-size: 22px;
+      margin: 15px 0;
+   }
+
+   /* Action buttons ko mobile par block/column mode me set karna */
+   .detail-actions {
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   .quantity-control {
+      justify-content: space-between; /* Plus/minus adjust karne ke liye */
+   }
+
+   .detail-wish {
+      width: 100%; /* Wishlist button ki width 100% karna */
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+   }
+}
