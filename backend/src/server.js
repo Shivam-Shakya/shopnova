@@ -17,7 +17,7 @@ import { categoryInventory, seedCatalog } from './seedProducts.js';
 import { syncCategories } from './catalog.js';
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: process.env.CLIENT_URL || 'https://shopnova-5ly7.vercel.app/' }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'https://shopnova-5ly7.vercel.app' }));
 app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev'));
 app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, limit: 100 }), authRoutes);
