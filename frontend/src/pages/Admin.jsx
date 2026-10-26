@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import api from "../api";
 import { useStore } from "../context/StoreContext";
-import "./admin.css";
+import "./Admin.css";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 const empty = {
