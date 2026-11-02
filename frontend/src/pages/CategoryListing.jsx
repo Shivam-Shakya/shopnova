@@ -54,9 +54,6 @@ export default function CategoryListing() {
   return (
     <main className="section shop-section category-page">
       <div className="container">
-        <Link to="/" className="back-link">
-          <ArrowLeft size={16} /> Back to home
-        </Link>
         <div className="section-heading category-heading">
           <div>
             <div className="eyebrow">

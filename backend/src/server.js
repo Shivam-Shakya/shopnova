@@ -17,7 +17,24 @@ import { categoryInventory, seedCatalog } from './seedProducts.js';
 import { syncCategories } from './catalog.js';
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: process.env.CLIENT_URL || 'https://shopnova-5ly7.vercel.app' }));
+// app.use(cors({ origin: process.env.CLIENT_URL || 'https://shopnova-5ly7.vercel.app/' }));
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.CLIENT_URL
+].filter(Boolean);
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev'));
 app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, limit: 100 }), authRoutes);

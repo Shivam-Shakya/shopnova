@@ -176,9 +176,6 @@ export default function ProductDetails() {
 
   return (
     <main className="container detail-page">
-      <button className="back-link" onClick={() => window.history.back()}>
-        <ArrowLeft size={16} /> Back to the collection
-      </button>
       <div className="detail-grid">
         <div>
           <div className="detail-image">

@@ -12,6 +12,7 @@ import {
 import { useStore } from "../context/StoreContext";
 import api from "../api";
 import "./Header.css";
+import LogoImg from "../assets/Logo.png";
 
 const menus = {
   Accessories: [],
@@ -60,9 +61,10 @@ export default function Header() {
         A little something for your everyday{" "}
         <span>✦ Free shipping over ₹1,999</span>
       </div>
-      <div className="nav-wrap container">
-        <Link to="/" className="brand" onClick={close}>
-          <span className="brand-mark">s.</span> shopnova
+      {/* Full width ke liye container class hata di gayi hai ya CSS se stretch kiya gaya hai */}
+      <div className="nav-wrap">
+        <Link to="/" className="brand-logo-link" onClick={close}>
+          <img src={LogoImg} alt="ShopNova Logo" className="site-logo-img" />
         </Link>
         <nav
           className={open ? "nav-links open" : "nav-links"}

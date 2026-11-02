@@ -587,7 +587,7 @@ function Overview({ summary, orders = [], products = [] }) {
     // Sales count ke hisaab se sort karke Top 5 nikalna
     topSellingList = Object.values(productSales)
       .sort((a, b) => b.salesCount - a.salesCount)
-      .slice(0, 5);
+      .slice(0, 20);
   }
 
   return (

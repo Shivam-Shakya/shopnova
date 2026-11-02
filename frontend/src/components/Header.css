@@ -8,6 +8,7 @@
   background: rgba(255, 253, 249, 0.94);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(32, 36, 31, 0.08);
+  width: 100%;
 }
 
 .announcement {
@@ -20,41 +21,36 @@
   gap: 14px;
   font-size: 10px;
   letter-spacing: 0.07em;
+  width: 100%;
 }
 
 .announcement span {
   color: var(--lime);
 }
 
+/* Full width header styling with balanced padding */
 .nav-wrap {
-  height: 75px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.brand {
-  font-family: Manrope, sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -1px;
+/* New Logo Styling */
+.brand-logo-link {
   display: flex;
   align-items: center;
-  gap: 9px;
-  white-space: nowrap;
+  text-decoration: none;
 }
 
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 11px;
-  background: var(--lime);
-  display: inline-grid;
-  place-items: center;
-  font-size: 22px;
-  letter-spacing: -2px;
-  color: var(--ink);
+.site-logo-img {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -128,6 +124,7 @@
   color: var(--ink);
   font-size: 15px;
   padding: 22px 0;
+  cursor: pointer;
 }
 
 .mega-menu {
@@ -189,7 +186,6 @@
    3. RESPONSIVE DESIGN (Media Queries)
    ==================================================== */
 
-/* --- Tablet / Smaller Desktops --- */
 @media screen and (max-width: 991px) {
   .nav-links {
     gap: 12px;
@@ -197,30 +193,22 @@
   }
   
   .mega-menu {
-    width: 90vw; /* Screen size ke hisaab se adjust */
+    width: 90vw;
   }
 }
 
-/* --- Mobile Devices (Tablets/Phones) --- */
 @media screen and (max-width: 768px) {
-  /* Brand resizing */
-  .brand {
-    font-size: 18px;
-  }
-  
-  .brand-mark {
-    width: 28px;
-    height: 28px;
-    font-size: 18px;
-    border-radius: 8px;
-  }
-
   .nav-wrap {
-    height: 65px;
+    height: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
     gap: 15px;
   }
 
-  /* Mobile menu button show karna */
+  .site-logo-img {
+    height: 55px;
+  }
+
   .mobile-menu {
     display: flex;
     justify-content: center;
@@ -232,9 +220,8 @@
     color: var(--ink);
   }
 
-  /* Desktop links ko column mein convert karke hide karna */
   .nav-links {
-    display: none; /* JavaScript ke through '.active' class lagakar isko show kar sakte hain */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -264,7 +251,6 @@
     padding: 12px 0;
   }
 
-  /* Mega menu ko mobile ke liye static/stack karna */
   .mega-menu {
     position: static;
     width: 100%;
@@ -273,35 +259,33 @@
     padding: 10px 15px 20px 15px;
     background: transparent;
     border: none;
-    display: none; /* CSS hover ki jagah JS/Click par open karna better hota hai mobile me */
+    display: none;
   }
 
-  /* Hover par mega-menu mobile mein khulne ke liye (Optional, agar purely CSS chahiye) */
   .mega-menu.visible {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-}
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
 
   .mega-menu-grid {
-    grid-template-columns: repeat(2, 1fr); /* Mobile me 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 }
 
-/* --- Extra Small Screens (Small Phones) --- */
 @media screen and (max-width: 480px) {
   .announcement {
     height: auto;
     padding: 8px 10px;
     font-size: 9px;
     text-align: center;
-    flex-wrap: wrap; /* Text jyada ho to break ho jaye */
+    flex-wrap: wrap;
   }
 
   .mega-menu-grid {
-    grid-template-columns: 1fr; /* Chote phone me 1 column */
+    grid-template-columns: 1fr;
   }
 
   .nav-actions .icon-btn {
