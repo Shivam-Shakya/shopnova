@@ -20,7 +20,7 @@ app.use(helmet());
 // app.use(cors({ origin: process.env.CLIENT_URL || 'https://shopnova-5ly7.vercel.app/' }));
 
 const allowedOrigins = [
-  'http://localhost:5173',
+  'https://shopnova-5ly7.vercel.app/',
   process.env.CLIENT_URL
 ].filter(Boolean);
 
