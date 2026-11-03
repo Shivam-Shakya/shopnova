@@ -1,6 +1,11 @@
 /* ====================================================
    10. ADMIN PANEL
    ==================================================== */
+.brand-mark img {
+   width: 150px;
+   height: auto;
+   object-fit: contain;
+}
 .admin-layout.modern-ui {
    display: flex;
    height: 100vh;
