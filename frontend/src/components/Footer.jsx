@@ -1,6 +1,7 @@
 import React from "react";
 import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import "./Footer.css";
+import logoImg from "../assets/Logo.png";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         {/* Column 1: Brand & Socials */}
         <div className="footer-brand-col">
           <a href="/" className="brand footer-brand">
-            <span className="brand-mark">s.</span> shopnova
+            <img src={logoImg} alt="ShopNova Logo" />
           </a>
           <p>
             Premium finds for your everyday life. Elevating your wardrobe and home with quality and effortless style.

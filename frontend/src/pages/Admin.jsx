@@ -23,6 +23,7 @@ import api from "../api";
 import { useStore } from "../context/StoreContext";
 import "./Admin.css";
 import LoadingSpinner from "../components/LoadingSpinner";
+import logoImg from "../assets/Logo.png";
 
 const empty = {
   name: "", 
@@ -378,7 +379,7 @@ export default function Admin() {
     <div className="admin-layout modern-ui">
       <aside className="admin-sidebar shadow-right">
         <div className="brand admin-brand">
-          <span className="brand-mark">s.</span> shopnova{" "}
+          <span className="brand-mark"><img src={logoImg} alt="ShopNova Logo" /></span>
           <span className="badge">ADMIN</span>
         </div>
         <div className="admin-menu-label">WORKSPACE</div>

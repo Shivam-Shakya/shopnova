@@ -37,6 +37,13 @@
   max-width: 300px;
 }
 
+.footer-brand img {
+  width: 160px; 
+  height: auto; 
+  margin-bottom: 15px;
+  background-color: #ffffff; 
+}
+
 /* Social Media Icons */
 .social-icons {
   display: flex;
