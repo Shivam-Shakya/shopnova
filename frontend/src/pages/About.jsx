@@ -7,7 +7,7 @@ export default function About() {
   return (
     <main>
       <div className="container content-page">
-        {/* 1. Hero Section */}
+        {/* 1. Hero Section */} 
         <section className="content-hero">
           <span className="eyebrow">OUR STORY</span>
           <h1>

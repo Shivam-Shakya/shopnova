@@ -66,9 +66,6 @@ export default function Blog() {
   if (post)
     return (
       <main className="section container content-page">
-        <Link to="/blog" className="back-link">
-          ← Back to journal
-        </Link>
         <article className="article-detail">
           <img src={post.image} alt="" />
           <div className="article-detail-copy">
@@ -96,15 +93,17 @@ export default function Blog() {
       </main>
     );
   return (
-    <main className="section container content-page">
+    <main className="container content-page">
       <div className="content-hero compact">
         <div className="eyebrow">THE SHOPNOVA JOURNAL</div>
         <h1>
           Ideas for your <span>everyday.</span>
         </h1>
         <p>
-          Style notes, thoughtful guides and little ways to make more of the
-          moments you already have.
+          Style notes, thoughtful guides, and little ways to make more of the
+  moments you already have. Dive into our curated stories exploring modern
+  fashion, mindful living, and the art of everyday elegance. Whether you're 
+  looking for wardrobe inspiration or lifestyle tips, you'll find it all right here.
         </p>
       </div>
       <div className="article-grid">

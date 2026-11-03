@@ -329,6 +329,127 @@
 }
 
 
+/* Benefits Section */
+.benefits {
+   background-color: #fcfbf8;
+   padding: 60px 0;
+   border-top: 1px solid var(--line, #e9e8e1);
+   border-bottom: 1px solid var(--line, #e9e8e1);
+}
+
+.benefits-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 30px;
+}
+
+.benefits-grid > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 12px;
+}
+
+.benefits-grid b {
+   display: block;
+   font-family: Manrope, sans-serif;
+   font-size: 16px;
+   color: var(--ink, #20241f);
+}
+
+.benefits-grid small {
+   font-size: 14px;
+   color: #7a7f72;
+}
+
+/* Story Section */
+.story-section {
+   padding: 80px 0;
+}
+
+.story-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 60px;
+   align-items: center;
+}
+
+.story-copy h2 {
+   font-family: Manrope, sans-serif;
+   font-size: clamp(32px, 5vw, 48px);
+   line-height: 1.1;
+   margin-bottom: 20px;
+   color: var(--ink, #20241f);
+   letter-spacing: -0.04em;
+}
+
+.story-copy h2 span {
+   color: #848f67;
+   font-style: italic;
+}
+
+.story-copy p {
+   font-size: 17px;
+   color: #454c44;
+   line-height: 1.7;
+   margin-bottom: 30px;
+}
+
+.story-image {
+   position: relative;
+   border-radius: 12px;
+   overflow: hidden;
+}
+
+.story-image img {
+   width: 100%;
+   height: auto;
+   display: block;
+   object-fit: cover;
+   border-radius: 12px;
+}
+
+.story-image-tag {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background: #d7f36a; 
+   color: var(--ink, #20241f);
+   padding: 10px 16px;
+   font-size: 13px;
+   font-weight: 700;
+   letter-spacing: 1px;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive updates for new sections */
+@media screen and (max-width: 991px) {
+   .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .story-grid {
+      gap: 40px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+   }
+   .story-grid {
+      grid-template-columns: 1fr;
+   }
+   .story-section {
+      padding: 50px 0;
+   }
+   .story-image-tag {
+      bottom: 15px;
+      right: 15px;
+   }
+}
+
 /* ====================================================
    RESPONSIVE DESIGN (Content / Category / Article)
    ==================================================== */
